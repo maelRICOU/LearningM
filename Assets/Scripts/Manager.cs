@@ -121,7 +121,8 @@ public class Manager : MonoBehaviour
      void Focus()
     {
         //Focus neural viewer
-
+        //NeuralNetworkViewer.instance.agent = agents[0];
+        //NeuralNetworkViewer.instance.RefreshAxon();
 
         CameraController.instance.target = agents[0].transform;
     }
@@ -171,5 +172,27 @@ public class Manager : MonoBehaviour
         }
 
         DataManager.instance.Save(nets);
+    }
+
+    public void Refocus()
+    {
+        agents.Sort();
+        Focus();
+    }
+
+    public void End()
+    {
+        StopAllCoroutines();
+        StartCoroutine(Loop());
+    }
+
+    public void ResetCrlh()
+    {
+        for (int i = 0; i < agents.Count; i++)
+        {
+            agents[i].net = new NeuralNetwork(agent.net.layers);
+        }
+
+        End();
     }
 }

@@ -445,7 +445,7 @@ MonoBehaviour:
     layers: 
   carController: {fileID: 2584897879089269327}
   fitness: 0
-  rayRange: 1
+  rayRange: 4
   layerMask:
     serializedVersion: 2
     m_Bits: 1
