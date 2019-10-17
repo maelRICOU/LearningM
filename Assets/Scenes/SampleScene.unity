@@ -4582,7 +4582,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   populationSize: 100
-  trainingDuration: 40
+  trainingDuration: 100
   agentPrefab: {fileID: 2584897879089269321, guid: 3e0df539df952174cbd2f41ec9473ddd,
     type: 3}
   agentGroup: {fileID: 1106388499}
