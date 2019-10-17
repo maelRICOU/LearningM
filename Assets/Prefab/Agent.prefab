@@ -132,12 +132,12 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.5
   m_SuspensionSpring:
-    spring: 3500
+    spring: 4000
     damper: 200
     targetPosition: 1
   m_SuspensionDistance: 0.35
   m_ForceAppPointDistance: 1
-  m_Mass: 0.0001
+  m_Mass: 0.01
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
     m_ExtremumSlip: 0.4
@@ -193,12 +193,12 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.5
   m_SuspensionSpring:
-    spring: 3500
+    spring: 4000
     damper: 200
     targetPosition: 1
   m_SuspensionDistance: 0.35
   m_ForceAppPointDistance: 1
-  m_Mass: 0.0001
+  m_Mass: 0.01
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
     m_ExtremumSlip: 0.4
@@ -254,12 +254,12 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.5
   m_SuspensionSpring:
-    spring: 3500
+    spring: 4000
     damper: 200
     targetPosition: 1
   m_SuspensionDistance: 0.35
   m_ForceAppPointDistance: 1
-  m_Mass: 0.0001
+  m_Mass: 0.01
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
     m_ExtremumSlip: 0.4
@@ -315,12 +315,12 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.5
   m_SuspensionSpring:
-    spring: 3500
+    spring: 4000
     damper: 200
     targetPosition: 1
   m_SuspensionDistance: 0.35
   m_ForceAppPointDistance: 1
-  m_Mass: 0.0001
+  m_Mass: 0.01
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
     m_ExtremumSlip: 0.4
@@ -423,7 +423,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2584897879089269321}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 5df2410d3c2309b488d612007c41b423, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -514,9 +514,13 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: f5a84e9722f2a2d42920a072903449a0, type: 3}
+    - target: {fileID: 2300008, guid: f5a84e9722f2a2d42920a072903449a0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d9ffb38a098738a48a576b4e2f43b73b, type: 2}
+    - target: {fileID: 400008, guid: f5a84e9722f2a2d42920a072903449a0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0302
+      value: -0.02923603
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: f5a84e9722f2a2d42920a072903449a0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -574,14 +578,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 20
       objectReference: {fileID: 0}
-    - target: {fileID: 400008, guid: f5a84e9722f2a2d42920a072903449a0, type: 3}
+    - target: {fileID: 400002, guid: f5a84e9722f2a2d42920a072903449a0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.02923603
+      value: -0.0302
       objectReference: {fileID: 0}
-    - target: {fileID: 2300008, guid: f5a84e9722f2a2d42920a072903449a0, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: d9ffb38a098738a48a576b4e2f43b73b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5a84e9722f2a2d42920a072903449a0, type: 3}
 --- !u!4 &2584897878035181064 stripped

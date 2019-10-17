@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Manager : MonoBehaviour
 {
@@ -19,16 +20,22 @@ public class Manager : MonoBehaviour
 
     Agent agent;
 
+    //public Text countGen;
+    //private int count;
+
     private void Start()
     {
         StartCoroutine(InitCouroutine());
+
+        //count = 0;
+        //SetCountGen();
     }
 
     IEnumerator InitCouroutine()
     {
 
         NewGeneration();
-        //Init(NeuralNetWorkViewer);
+        InitNeuralNetWorkViewer();
         Load();
         Focus();
 
@@ -39,9 +46,16 @@ public class Manager : MonoBehaviour
 
     }
 
+    private void InitNeuralNetWorkViewer()
+    {
+        NeuralNetworkViewer.instance.Init(agents[0]);
+    }
+
     IEnumerator Loop()
     {
         NewGeneration();
+
+        
 
         Focus();
 
@@ -51,6 +65,7 @@ public class Manager : MonoBehaviour
 
     void NewGeneration()
     {
+        //count = count + 1;
 
         AddRemoveAgent();
         agents.Sort();
@@ -121,8 +136,8 @@ public class Manager : MonoBehaviour
      void Focus()
     {
         //Focus neural viewer
-        //NeuralNetworkViewer.instance.agent = agents[0];
-        //NeuralNetworkViewer.instance.RefreshAxon();
+        NeuralNetworkViewer.instance.agent = agents[0];
+        NeuralNetworkViewer.instance.RefreshAxon();
 
         CameraController.instance.target = agents[0].transform;
     }
@@ -195,4 +210,9 @@ public class Manager : MonoBehaviour
 
         End();
     }
+
+    /*void SetCountGen()
+    {
+        countGen.text = "Count: " + count.ToString();
+    }*/
 }
