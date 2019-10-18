@@ -98,8 +98,8 @@ public class Agent : MonoBehaviour, IComparable<Agent>
         inputs[0] = RaySensor(pos + Vector3.up * 0.2f, transform.forward, 4 * rayRange);
         inputs[1] = RaySensor(pos + Vector3.up * 0.2f, transform.right, 1.5f * rayRange);
         inputs[2] = RaySensor(pos + Vector3.up * 0.2f, -transform.right, 1.5f * rayRange);
-        inputs[3] = RaySensor(pos + Vector3.up * 0.2f, transform.right + transform.forward, 2f);
-        inputs[4] = RaySensor(pos + Vector3.up * 0.2f, -transform.right + transform.forward, 2f );
+        inputs[3] = RaySensor(pos + Vector3.up * 0.2f, transform.right + transform.forward, 2f * rayRange);
+        inputs[4] = RaySensor(pos + Vector3.up * 0.2f, -transform.right + transform.forward, 2f * rayRange);
 
         inputs[5] = 1 - (float)Math.Tanh(rb.velocity.magnitude / 20);
         disCheckpoint = DisCheckPoint();

@@ -65,7 +65,7 @@ public class Manager : MonoBehaviour
 
     void NewGeneration()
     {
-        //count = count + 1;
+        
 
         AddRemoveAgent();
         agents.Sort();
@@ -74,6 +74,8 @@ public class Manager : MonoBehaviour
 
         ResetAgent();
         SetColor();
+
+        SetCountGen();
     }
 
     private void SetColor()
@@ -121,8 +123,7 @@ public class Manager : MonoBehaviour
 
         agent.net = new NeuralNetwork(layer);
 
-        Debug.Log(agent.net.layers.Length);
-        Debug.Log(agent.net.layers[0]);
+        
 
         agents.Add(agent);
     }
@@ -211,8 +212,12 @@ public class Manager : MonoBehaviour
         End();
     }
 
-    /*void SetCountGen()
+
+    private float numberOfGen;
+    void SetCountGen()
     {
-        countGen.text = "Count: " + count.ToString();
-    }*/
+        numberOfGen = PlayerPrefs.GetFloat("ngen") + 1;
+        PlayerPrefs.SetFloat("ngen", numberOfGen);
+        Debug.Log("Generation" + numberOfGen);
+    }
 }
